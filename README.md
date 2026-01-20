@@ -84,3 +84,5 @@ Not intended for scientific or advanced mathematical operations
 
 LifeCalc is intentionally designed to be simple, stable, and explainable, focusing on JavaScript fundamentals rather than excessive features.
 The project demonstrates strong understanding of DOM manipulation, application logic, and user interaction, aligning closely with the Web Dev II course objectives.
+
+https://snehaxcse.github.io/LifeCalc/
