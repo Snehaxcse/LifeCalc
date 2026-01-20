@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeCalc</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="life-calc" role="application" aria-label="Life Calculator">
+
+        <section class="display" aria-live="polite">
+            <div class="mode-name" id="modeName">Normal Calculator</div>
+            <input type="text" id="screen" aria-label="Calculator display" autocomplete="off" inputmode="none"
+                disabled />
+        </section>
+
+        <!-- Calculator Body -->
+        <section class="calculator-body">
+
+            <!-- Keypad -->
+            <section class="keys" aria-label="Calculator keypad">
+
+
+                <button data-key="7" onclick="append('7')">7</button>
+                <button data-key="8" onclick="append('8')">8</button>
+                <button data-key="9" onclick="append('9')">9</button>
+                <button data-key="/" class="op" onclick="append('/')">÷</button>
+
+
+                <button data-key="4" onclick="append('4')">4</button>
+                <button data-key="5" onclick="append('5')">5</button>
+                <button data-key="6" onclick="append('6')">6</button>
+                <button data-key="*" class="op" onclick="append('*')">×</button>
+
+
+                <button data-key="1" onclick="append('1')">1</button>
+                <button data-key="2" onclick="append('2')">2</button>
+                <button data-key="3" onclick="append('3')">3</button>
+                <button data-key="-" class="op" onclick="append('-')">−</button>
+
+                <button data-key="0" class="zero" onclick="append('0')">0</button>
+                <button data-key="," onclick="append(',')">,</button>
+                <button data-key="+" class="op" onclick="append('+')">+</button>
+
+
+                <div class="bottom-row">
+                    <button class="key small" data-key="C" aria-label="Clear">C</button>
+                    <button class="key small" data-key="." aria-label="Decimal">.</button>
+                    <button class="key equal" data-key="=" aria-label="Equals">=</button>
+                </div>
+
+            </section>
+
+            <!-- Modes -->
+            <aside class="modes" aria-label="Life modes">
+
+                <h3>Life Modes</h3>
+
+                <button onclick="setMode('normal')">🧮 Normal</button>
+                <button onclick="setMode('savings')">💰 Savings</button>
+                <button onclick="setMode('study')">📚 Study</button>
+                <button onclick="setMode('prank')">🤡 Prank</button>
+                <button onclick="setMode('burnout')">🧠 Burnout</button>
+
+                <p class="hint">
+                    Enter values separated by commas
+                    <br>
+                    Example: 50000, 10000, 5
+                </p>
+
+            </aside>
+
+        </section>
+
+        <!-- Result -->
+        <div class="result-box" id="result" aria-live="polite"></div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
